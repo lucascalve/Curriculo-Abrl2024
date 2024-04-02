@@ -1,0 +1,89 @@
+body {
+    padding: 3rem;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+    background-color: rgb(248, 208, 133);
+
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+}
+
+header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,26,247,1) 0%, rgba(221,120,254,1) 45%, rgba(197,137,237,1) 100%); 
+    /* https://cssgradient.io/ */
+
+    padding-left: 2rem;
+    border: 2px solid;
+    border-right: 0px;
+}
+
+header > div > h1 {
+    color: white;
+    
+}
+
+header > div > h2 {
+    color: white;
+    
+}
+
+#container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+
+    border-left: 2px solid;
+    border-bottom: 2px;
+}
+
+#side {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+
+    max-width: fit-content;
+    max-height: fit-content;
+
+    border-style: solid;
+    border-width: 0px 2px;
+    border-left: 0px;
+}
+
+#side > div > p {
+    padding: 0rem 1rem;
+}
+
+.icone {
+    width: 24px;
+    height: 24px;
+
+    vertical-align: middle; /* Alinhar imagem, não texto */
+    margin-right: 2px;
+}
+
+.titulo {
+    background-color: #a1a5f3;
+    
+    text-align: center;
+    padding: 0rem 1rem;
+
+    border-width: 2px 0px;
+    border-style: solid;
+}
+
+.titulo > p {
+    margin-bottom: 0px;
+    margin-top: 0.3rem;
+
+    padding: 0rem 1rem;
+}
+
+#resumo {
+    padding: 1rem;
+    place-items: center start;
+
+    border-bottom: 2px;
+}
