@@ -32,6 +32,9 @@ header > div > h2 {
 }
 
 #container2 {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(248,208,133,1) 0%, rgba(255,255,255,1) 100%);
+    /* https://cssgradient.io/ */
+
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 
@@ -40,11 +43,12 @@ header > div > h2 {
 }
 
 #side {
+    background-color: rgb(248, 208, 133);
+
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
 
-    max-width: fit-content;
+    max-width: 15rem;
     max-height: fit-content;
 
     border-style: solid;
@@ -64,26 +68,47 @@ header > div > h2 {
     margin-right: 2px;
 }
 
+#sideDiv {
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
 .titulo {
     background-color: #a1a5f3;
     
     text-align: center;
     padding: 0rem 1rem;
+    padding-right: 2px;
 
     border-width: 2px 0px;
     border-style: solid;
-}
 
-.titulo > p {
-    margin-bottom: 0px;
-    margin-top: 0.3rem;
-
-    padding: 0rem 1rem;
+    max-width: inherit;
 }
 
 #resumo {
     padding: 1rem;
-    place-items: center start;
 
     border-bottom: 2px;
+    max-width: 30rem;
+}
+
+#resumo > p {
+    overflow-wrap: break-word;
+}
+
+a:link { color: #0000EE; }
+a:visited { color: #551A8B; }
+
+@media screen and (max-width: 1100px) {
+    #container2 {
+        grid-template-columns: 1fr;
+        background: rgb(248, 208, 133);
+    }
+
+    #side {
+        border-right: 0px;
+        max-width: 100%;
+        border-bottom: 2px solid;
+    }
 }
